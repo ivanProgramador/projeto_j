@@ -1,0 +1,41 @@
+<%- include('../partials/header.ejs') -%>
+
+<div class="card col-md-6">
+
+    <div class="card-header">
+
+        <h3 class="card-title" >Edição de tipos </h3>
+
+    </div>
+  
+     <div class="card-body">
+
+        <form action="/tipos/editar" method="post">
+
+            <input type="hidden" name="id" value="<%= tipo.id %>">
+
+            <label for="codigo">Codigo:</label>
+            <input class="form-control" type="text" name="codigo" value="<%= tipo.codigo %>"><br>
+    
+            <label for="nome">Nome:</label>
+            <input class="form-control" type="text" name="nome" value="<%= tipo.nome %>" ><br>
+    
+            <label for="nome">Descrição:</label>
+            <input class="form-control" type="text" name="descricao" value="<%= tipo.descricao %>" ><br>
+    
+            <button class="btn btn-primary" type="submit">Atualizar</button>
+    
+        </form>
+
+     </div>
+
+     <div class="card-footer">
+
+        <a class="btn btn-primary"  href="http://localhost:8080/tipos">Voltar</a>
+
+     </div>
+
+</div>
+
+
+<%- include('../partials/footer.ejs') -%>
